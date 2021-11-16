@@ -1,0 +1,6 @@
+Sistema de criar os caminhos:
+Criar uma table que conterá os itens da tela, e cada um sera um numero na table, a carta será desenhada conforme o seu número na table,
+quando o player passa ele ira para a direção desse item da table e será removido os 3 itens da table e criado 3 novos outros, os itens 
+existentes mudaram a posição na tela pois mudaram a posição na table
+
+States = Menu, Game, Battle, Result
