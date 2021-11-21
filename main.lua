@@ -7,11 +7,8 @@ function love.load()
     bigFont = love.graphics.newImageFont("assets/bigFont.png", ' abcdefghijklmnopqrstuvwxyz', -2)
     require "scr/requires"
 
-    -- Window Setup
-    scale = 4
-    core_w = 320
-    core_h = 180
-    love.window.setMode(core_w * scale, core_h * scale)
+    -- Setup Screen
+    setupScreen()
 
      -- Assets
      assets = {
@@ -28,7 +25,15 @@ function love.load()
             love.graphics.newImage("assets/equipmentEmpty.png"),
             love.graphics.newImage("assets/equipmentEmptyHigh.png"),
         },     
-        shadowEquipment = love.graphics.newImage("assets/shadowEquipment.png")
+        shadowEquipment = love.graphics.newImage("assets/shadowEquipment.png"),
+        dice = {
+            pair = love.graphics.newImage("assets/pairDice.png"),
+            odd = love.graphics.newImage("assets/oddDice.png"),
+            cd = {
+                love.graphics.newImage("assets/cdDice.png"),
+                love.graphics.newImage("assets/cdDiceHigh.png")
+            }
+        }
     }
 
     -- Enemies Variables
@@ -84,9 +89,9 @@ function love.update(dt)
 end
 
 function love.draw()
-    mousePressed = {}
     love.graphics.push()
-    love.graphics.scale(4, 4)
+    love.graphics.scale(scale, scale)
+    mousePressed = {}
     drawBackground(20)
     love.graphics.setFont(bigFont)
     love.graphics.printf("olimpio", 0, 5, core_w, "center")

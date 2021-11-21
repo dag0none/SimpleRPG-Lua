@@ -6,7 +6,7 @@ function createEquipmentBox(_name, _x, _y)
         xTo = _x,
         yTo = _y,
         yToOver = _y,
-        sY = _y + 19,
+        sY = _y + 18,
         w = 20,
         h = 21,
         xTo = _x,
@@ -21,10 +21,10 @@ function updateEquipmentBox(_tbl)
     for i, eqBox in pairs(_tbl) do
         if onMouseOver(eqBox) then
             eqBox.spr = assets.equipmentBox[2]
-            eqBox.yTo = eqBox.yToOver
+            eqBox.yTo = eqBox.yToOver - 1
         else
             eqBox.spr = assets.equipmentBox[1]
-            eqBox.yTo = eqBox.yToOver + 1
+            eqBox.yTo = eqBox.yToOver
         end
         eqBox.y = smoothApproach(eqBox.y, eqBox.yTo, 0.2)
     end

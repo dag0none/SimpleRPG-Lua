@@ -59,5 +59,8 @@ textBoxes = {
     },
     weaponTurn = {
         createTextBox("choose your weapon", smallFont, 122, 85, 180)
+    },
+    armorTurn = {
+        createTextBox("choose your armor", smallFont, 122, 85, 180)
     }
 }
