@@ -43,7 +43,8 @@ function drawTextBox(_tbl)
 end
 
 function resetTextBoxPosition()
-    textBoxes.weaponTurn[1].x = 350 
+    textBoxes.weaponTurn[1].x = -100 
+    textBoxes.armorTurn[1].x = -100 
     textBoxes.cardStats.health.xTo = -65
     textBoxes.cardStats.cd.xTo = -65
     textBoxes.cardStats.atk.xTo = -65

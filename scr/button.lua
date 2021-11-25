@@ -1,8 +1,9 @@
 function createButton(_spr, _x, _y, _func)
     local this = {
         spr = _spr,
-        x = _x,
+        x = -100,
         y = _y,
+        xTo = _x,
         w = _spr[1]:getWidth(),
         h = _spr[1]:getHeight(),
         click = _func,
@@ -21,6 +22,7 @@ function updateButton(_button)
     else
         _button.index = 1
     end
+    _button.x = smoothApproach(_button.x, _button.xTo, 0.2)
 end
 
 function drawButton(_button)

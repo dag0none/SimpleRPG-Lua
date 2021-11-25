@@ -32,6 +32,10 @@ function love.load()
             cd = {
                 love.graphics.newImage("assets/cdDice.png"),
                 love.graphics.newImage("assets/cdDiceHigh.png")
+            },
+            atk = {
+                love.graphics.newImage("assets/atkDice.png"),
+                love.graphics.newImage("assets/atkDiceHigh.png")
             }
         }
     }
@@ -86,6 +90,7 @@ function love.update(dt)
     mouseY = mouseY / scale
 
     t = t + dt
+    updateTimers(dt)
 end
 
 function love.draw()

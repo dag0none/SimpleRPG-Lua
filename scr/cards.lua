@@ -3,8 +3,8 @@ function createCardEnemy(_enemy, _x, _y)
         name = _enemy[1],
         health = _enemy[2],
         cd = _enemy[3],
-        min_atk = _enemy[4],
-        max_atk = _enemy[5],
+        amount_atk = _enemy[4],
+        value_atk = _enemy[5],
         description = _enemy[6],
         spr = assets.cardEmpty[1],
         x = _x,
@@ -69,6 +69,6 @@ end
 function printCardText(_card)
     textBoxes.cardStats.health.text = 'health: ' .. _card.health
     textBoxes.cardStats.cd.text = 'c.d: ' .. tostring(_card.cd)
-    textBoxes.cardStats.atk.text = 'attack: ' .. tostring(_card.min_atk) .. '-' .. tostring(_card.max_atk)
+    textBoxes.cardStats.atk.text = 'attack: ' .. tostring(_card.amount_atk) .. '-' .. tostring(_card.value_atk)
     textBoxes.cardStats.description.text = '"' .. _card.description .. '"'
 end
